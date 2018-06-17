@@ -9,7 +9,7 @@ echo "Downloading RocketMod..."
 curl -o Rocket.zip "https://ci.rocketmod.net/job/Rocket.Unturned/lastSuccessfulBuild/artifact/Rocket.Unturned/bin/Release/Rocket.zip"
 unzip -o -q Rocket.zip
 
-# Panel Workaround
+# Feature removed from panel?
 #if [ -z "${ALLOC_0__PORT}" ] || [ "$((ALLOC_0__PORT-1))" != "${SERVER_PORT}" ]; then
 #    echo "Please add port $((SERVER_PORT+1)) to the server as an additional allocation, or you will be unable to connect."
 #    sleep 10
@@ -17,8 +17,6 @@ unzip -o -q Rocket.zip
 #fi
 
 # Unturned Workaround
-cp steam/linux32/steamclient.so /lib
-cp steam/linux64/steamclient.so /lib64
 ulimit -n 2048
 export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH
 
