@@ -9,7 +9,7 @@ cd /home/container
 # Update Workshop Items
 for i in $(echo "${WORKSHOP_ITEM}" | sed "s/,/ /g")
 do
-    ./steam/steamcmd.sh +@sSteamCmdForcePlatformBitness 32 +login anonymous +force_install_dir /home/container/Servers/unturned/Workshop +workshop_download_item "$i" +quit
+    ./steam/steamcmd.sh +@sSteamCmdForcePlatformBitness 32 +login anonymous +force_install_dir /home/container/Servers/unturned/Workshop +workshop_download_item 304930 "$i" +quit
 done
 # Update Workshop Maps
 
