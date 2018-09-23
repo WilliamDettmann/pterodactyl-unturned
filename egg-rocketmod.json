@@ -6,8 +6,8 @@
     "exported_at": "2018-04-27T21:30:05+00:00",
     "name": "RocketMod",
     "author": "isaac@isaacs.site",
-    "description": "The RocketMod server mod for Unturned.",
-    "image": "tenten8401\/pterodactyl-unturned",
+    "description": "Unturned with Rocket Mod and Workshop",
+    "image": "sourpickel\/pterodactyl-unturned",
     "startup": "mono RocketLauncher.exe unturned",
     "config": {
         "files": "{\r\n     \"Servers\/unturned\/Server\/Commands.dat\": {\r\n    \"parser\": \"file\",\r\n    \"find\": {\r\n    \"Port\": \"Port {{server.build.default.port}}\"\r\n    }\r\n}\r\n}",
@@ -25,16 +25,16 @@
     "variables": [
         {
             "name": "Account Name",
-            "description": "A Steam username w\/ Unturned on the account.",
+            "description": "Steam Username",
             "env_variable": "STEAM_USER",
             "default_value": "",
             "user_viewable": 0,
             "user_editable": 0,
-            "rules": "required|alpha_num"
+            "rules": "required"
         },
         {
             "name": "Account Password",
-            "description": "The password for the Steam account.",
+            "description": "Steam Password",
             "env_variable": "STEAM_PASS",
             "default_value": "",
             "user_viewable": 0,
