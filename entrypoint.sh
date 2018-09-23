@@ -4,7 +4,7 @@ sleep 2
 cd /home/container
 
 # Update Unturned Server
-#./steam/steamcmd.sh +@sSteamCmdForcePlatformBitness 32 +login "${STEAM_USER}" "${STEAM_PASS}" +force_install_dir /home/container +app_update 304930 +quit
+./steam/steamcmd.sh +@sSteamCmdForcePlatformBitness 32 +login "${STEAM_USER}" "${STEAM_PASS}" +force_install_dir /home/container +app_update 304930 +quit
 
 # Update Workshop Items
 for i in $(echo "${WORKSHOP_ITEM}" | sed "s/,/ /g")
