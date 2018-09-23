@@ -7,7 +7,7 @@ cd /home/container
 #./steam/steamcmd.sh +@sSteamCmdForcePlatformBitness 32 +login "${STEAM_USER}" "${STEAM_PASS}" +force_install_dir /home/container +app_update 304930 +quit
 
 # Update Workshop Items
-for i in $(echo "${workshopitem}" | sed "s/,/ /g")
+for i in $(echo "${WORKSHOP_ITEM}" | sed "s/,/ /g")
 do
     ./steam/steamcmd.sh +@sSteamCmdForcePlatformBitness 32 +login "${STEAM_USER}" "${STEAM_PASS}" +force_install_dir /home/container/Servers/unturned/Workshop +workshop_download_item "$i" +quit
 done
